@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8D5841DB-6E2D-493E-AA75-D0CB966253C3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FoodParadise</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8ECA8EEB1F9DA0857B6B571AE212BDF7393F1F6E</key>
+		<string>https://github.com/rmit-s3411801-Shu-Heng-Foo/FoodParadise.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FoodParadise/FoodParadise.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8ECA8EEB1F9DA0857B6B571AE212BDF7393F1F6E</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/rmit-s3411801-Shu-Heng-Foo/FoodParadise.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8ECA8EEB1F9DA0857B6B571AE212BDF7393F1F6E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8ECA8EEB1F9DA0857B6B571AE212BDF7393F1F6E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FoodParadise</string>
+		</dict>
+	</array>
+</dict>
+</plist>
