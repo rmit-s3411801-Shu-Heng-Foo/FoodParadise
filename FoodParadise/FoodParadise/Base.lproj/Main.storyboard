@@ -94,7 +94,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n9m-Cf-ULJ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n9m-Cf-ULJ">
                                 <rect key="frame" x="188" y="108" width="224" height="224"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="224" id="t4S-sG-bqv"/>
@@ -200,7 +200,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="QeE-eC-cnj" firstAttribute="top" secondItem="OEu-C2-Hst" secondAttribute="bottom" constant="157" id="EZn-vC-F7Q"/>
-                            <constraint firstItem="trb-xL-KeB" firstAttribute="top" secondItem="s54-ye-uOU" secondAttribute="bottom" constant="121" id="EjU-7j-3Lr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qP3-MX-xse" secondAttribute="trailing" constant="168" id="MRo-sh-96T"/>
                             <constraint firstItem="OEu-C2-Hst" firstAttribute="leading" secondItem="nS7-8M-y3S" secondAttribute="leading" constant="199" id="QtL-Fh-ol7"/>
                             <constraint firstItem="qP3-MX-xse" firstAttribute="leading" secondItem="OEu-C2-Hst" secondAttribute="trailing" constant="65" id="f7F-9f-q2w"/>
@@ -359,8 +358,8 @@
                             <outlet property="delegate" destination="Lpl-rW-yyL" id="fX8-dt-Uz2"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Food Menu" id="UE3-2g-Zer">
-                        <barButtonItem key="rightBarButtonItem" title="Logout" id="WSK-92-HbS"/>
+                    <navigationItem key="navigationItem" title="Food Menu" id="66g-xj-ZjR">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="MqS-HV-26f"/>
                     </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oyI-il-CxI" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -26,6 +26,14 @@ class SignUpViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func signup(sender : UIButton){
+        var user:String = "User.txt"
+        var pass:String = "Pass.txt"
+        
+        if (user.isEqual(" ")){
+            
+        }
+    }
 
     /*
     // MARK: - Navigation

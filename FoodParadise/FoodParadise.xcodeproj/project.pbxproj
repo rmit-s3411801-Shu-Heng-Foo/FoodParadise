@@ -13,6 +13,8 @@
 		43026FC61B02F5B200AD2C80 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43026FC51B02F5B200AD2C80 /* Images.xcassets */; };
 		43026FC91B02F5B200AD2C80 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43026FC71B02F5B200AD2C80 /* LaunchScreen.xib */; };
 		43026FD51B02F5B200AD2C80 /* FoodParadiseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43026FD41B02F5B200AD2C80 /* FoodParadiseTests.swift */; };
+		4304A3B71B12EA11006AD497 /* User.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4304A3B61B12EA11006AD497 /* User.txt */; };
+		4304A3B91B12EA55006AD497 /* Pass.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4304A3B81B12EA55006AD497 /* Pass.txt */; };
 		437216471B0F265400C9DDB0 /* MenuCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437216461B0F265400C9DDB0 /* MenuCollectionViewController.swift */; };
 		43B958E11B0478FC00EC10D9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B958E01B0478FC00EC10D9 /* SignUpViewController.swift */; };
 		43C4CBE61B0F456E007ACBA1 /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C4CBE51B0F456E007ACBA1 /* FoodDetailViewController.swift */; };
@@ -42,6 +44,8 @@
 		43026FCE1B02F5B200AD2C80 /* FoodParadiseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodParadiseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43026FD31B02F5B200AD2C80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43026FD41B02F5B200AD2C80 /* FoodParadiseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodParadiseTests.swift; sourceTree = "<group>"; };
+		4304A3B61B12EA11006AD497 /* User.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = User.txt; sourceTree = "<group>"; };
+		4304A3B81B12EA55006AD497 /* Pass.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Pass.txt; sourceTree = "<group>"; };
 		437216461B0F265400C9DDB0 /* MenuCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewController.swift; sourceTree = "<group>"; };
 		43B958E01B0478FC00EC10D9 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		43C4CBE51B0F456E007ACBA1 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +102,8 @@
 				43C4CBE71B0F45C1007ACBA1 /* SignUpResultViewController.swift */,
 				43C4CBE51B0F456E007ACBA1 /* FoodDetailViewController.swift */,
 				437216461B0F265400C9DDB0 /* MenuCollectionViewController.swift */,
+				4304A3B61B12EA11006AD497 /* User.txt */,
+				4304A3B81B12EA55006AD497 /* Pass.txt */,
 				43026FC51B02F5B200AD2C80 /* Images.xcassets */,
 				43026FC71B02F5B200AD2C80 /* LaunchScreen.xib */,
 				43026FBC1B02F5B200AD2C80 /* Supporting Files */,
@@ -210,7 +216,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4304A3B91B12EA55006AD497 /* Pass.txt in Resources */,
 				43026FC41B02F5B200AD2C80 /* Main.storyboard in Resources */,
+				4304A3B71B12EA11006AD497 /* User.txt in Resources */,
 				43026FC91B02F5B200AD2C80 /* LaunchScreen.xib in Resources */,
 				43026FC61B02F5B200AD2C80 /* Images.xcassets in Resources */,
 			);
