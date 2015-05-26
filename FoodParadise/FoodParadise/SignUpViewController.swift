@@ -55,7 +55,7 @@ class SignUpViewController: UIViewController {
         }
         
         //Store user login data
-        
+        NSUserDefaults.standardUserDefaults().setObject(username, forKey: "username");
         
         
         //Send to successful login page

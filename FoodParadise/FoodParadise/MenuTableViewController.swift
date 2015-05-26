@@ -9,7 +9,9 @@
 import UIKit
 
 class MenuTableViewController: UITableViewController {
-    let API_KEY :String = "?api_key= dvxZrB702s49D3kzm6xbrcMC860Dp68q"
+    //let API_KEY :String = "?api_key= dvxZrB702s49D3kzm6xbrcMC860Dp68q"
+    //Nicks API Key
+    let API_KEY :String = "?api_key= dvx37962Qnz7wY2uiRTE9gC9PHJ9WzR5"
 
     override func viewDidLoad() {
         super.viewDidLoad()
