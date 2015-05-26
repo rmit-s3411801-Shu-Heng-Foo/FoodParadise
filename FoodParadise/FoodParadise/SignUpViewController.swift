@@ -31,126 +31,165 @@ class SignUpViewController: UIViewController {
     
     @IBAction func signUpTapped(sender: AnyObject) {
         
-        //Storing the 3 variables as NSStrings
-        var username:NSString = usernameTxt.text as NSString
-        var password:NSString = passwordTxt.text as NSString
-        var confirm_password:NSString = confirmTxt.text as NSString
+        //Storing the 3 variables
+        let username = usernameTxt.text;
+        let password = passwordTxt.text;
+        let confirm = confirmTxt.text;
+       
         
-        //Check for empty fields
-        if(username.isEqualToString("") || password.isEqualToString("")){
-            
-        //Create an alert message
-            var alertView:UIAlertView = UIAlertView()
-            alertView.title = "!Error!"
-            alertView.message = "Please enter all your details again."
-            alertView.delegate = self
-            alertView.addButtonWithTitle("Retry")
-            alertView.show()
-            
-        //Check for password match
-        }else if(!password.isEqual(confirm_password)) {
-            
-            var alertView:UIAlertView = UIAlertView()
-            alertView.title = "!Error!"
-            alertView.message = "Passwords do not match"
-            alertView.delegate = self
-            alertView.addButtonWithTitle("Retry")
-            alertView.show()
-            
-        //Successful Sign-Up, Storing the data
-        }else{
-            
-            //Store the 3 variables in "post"
-            var post:NSString = "username=\(username)&password=\(password)&c_password=\(confirm_password)"
-            
-            NSLog("PostData: %@",post);
-            
-            var url:NSURL = NSURL(string: "https://dipinkrishna.com/jsonsignup.php")!
-            
-            var postData:NSData = post.dataUsingEncoding(NSASCIIStringEncoding)!
-            
-            var postLength:NSString = String( postData.length )
-            
-            var request:NSMutableURLRequest = NSMutableURLRequest(URL: url)
-            request.HTTPMethod = "POST"
-            request.HTTPBody = postData
-            request.setValue(postLength, forHTTPHeaderField: "Content-Length")
-            request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-            request.setValue("application/json", forHTTPHeaderField: "Accept")
-            
-            
-            var reponseError: NSError?
-            var response: NSURLResponse?
-            
-            var urlData: NSData? = NSURLConnection.sendSynchronousRequest(request, returningResponse:&response, error:&reponseError)
-            
-            if( urlData != nil ){
-                let res = response as NSHTTPURLResponse!;
-                
-                NSLog("Response code: %ld", res.statusCode);
-                
-                if(res.statusCode >= 200 && res.statusCode < 300)
-                {
-                    var responseData:NSString  = NSString(data:urlData!, encoding:NSUTF8StringEncoding)!
-                    
-                    NSLog("Response ==> %@", responseData);
-                    
-                    var error: NSError?
-                    
-                    let jsonData:NSDictionary = NSJSONSerialization.JSONObjectWithData(urlData!, options:NSJSONReadingOptions.MutableContainers , error: &error) as NSDictionary
-                    
-                    
-                    let success:NSInteger = jsonData.valueForKey("success") as NSInteger
-                    
-                    //[jsonData[@"success"] integerValue];
-                    
-                    NSLog("Success: %ld", success);
-                    
-                    if(success == 1)
-                    {
-                        NSLog("Successful Sign-Up");
-                        self.dismissViewControllerAnimated(true, completion: nil)
-                    }else{
-                        var error_msg:NSString
-                        
-                        if jsonData["error_message"] as? NSString != nil {
-                            error_msg = jsonData["error_message"] as NSString
-                        }else{
-                            error_msg = "Unknown Error"
-                        }
-                        var alertView:UIAlertView = UIAlertView()
-                        alertView.title = "!Error!"
-                        alertView.message = error_msg
-                        alertView.delegate = self
-                        alertView.addButtonWithTitle("Retry")
-                        alertView.show()
-                        
-                    }
-                    
-                }else{
-                    var alertView:UIAlertView = UIAlertView()
-                    alertView.title = "!Error!"
-                    alertView.message = "Connection Failed"
-                    alertView.delegate = self
-                    alertView.addButtonWithTitle("Retry")
-                    alertView.show()
-                }
-            }else{
-                var alertView:UIAlertView = UIAlertView()
-                alertView.title = "!Error!"
-                alertView.message = "Connection Failure"
-                if let error = reponseError {
-                    alertView.message = (error.localizedDescription)
-                }
-                alertView.delegate = self
-                alertView.addButtonWithTitle("Retry")
-                alertView.show()
-            }
+        //Check for empty text fields
+        if(username.isEmpty || password.isEmpty || confirm.isEmpty)
+        {
+            //Display error message
+            displayError("All fields are required. *");
+            return;
         }
+        
+        //Check for confirm password match
+        if(password != confirm)
+        {
+            //Display error message
+            displayError("Passwords do not match.");
+        
+            return;
+        }
+        
+        //Store user login data
+        
+        
+        
+        //Send to successful login page
+        
+        
+        
+
+        
+        
+//        
+//        //Check for empty fields
+//        if(username.isEqualToString("") || password.isEqualToString("")){
+//            
+//        //Create an alert message
+//            var alertView:UIAlertView = UIAlertView()
+//            alertView.title = "!Error!"
+//            alertView.message = "Please enter all your details again."
+//            alertView.delegate = self
+//            alertView.addButtonWithTitle("Retry")
+//            alertView.show()
+//            
+//        //Check for password match
+//        }else if(!password.isEqual(confirm_password)) {
+//            
+//            var alertView:UIAlertView = UIAlertView()
+//            alertView.title = "!Error!"
+//            alertView.message = "Passwords do not match"
+//            alertView.delegate = self
+//            alertView.addButtonWithTitle("Retry")
+//            alertView.show()
+//            
+//        //Successful Sign-Up, Storing the data
+//        }else{
+//            
+//            //Store the 3 variables in "post"
+//            var post:NSString = "username=\(username)&password=\(password)&c_password=\(confirm_password)"
+//            
+//            NSLog("PostData: %@",post);
+//            
+//            var url:NSURL = NSURL(string: "https://dipinkrishna.com/jsonsignup.php")!
+//            
+//            var postData:NSData = post.dataUsingEncoding(NSASCIIStringEncoding)!
+//            
+//            var postLength:NSString = String( postData.length )
+//            
+//            var request:NSMutableURLRequest = NSMutableURLRequest(URL: url)
+//            request.HTTPMethod = "POST"
+//            request.HTTPBody = postData
+//            request.setValue(postLength, forHTTPHeaderField: "Content-Length")
+//            request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+//            request.setValue("application/json", forHTTPHeaderField: "Accept")
+//            
+//            
+//            var reponseError: NSError?
+//            var response: NSURLResponse?
+//            
+//            var urlData: NSData? = NSURLConnection.sendSynchronousRequest(request, returningResponse:&response, error:&reponseError)
+//            
+//            if( urlData != nil ){
+//                let res = response as NSHTTPURLResponse!;
+//                
+//                NSLog("Response code: %ld", res.statusCode);
+//                
+//                if(res.statusCode >= 200 && res.statusCode < 300)
+//                {
+//                    var responseData:NSString  = NSString(data:urlData!, encoding:NSUTF8StringEncoding)!
+//                    
+//                    NSLog("Response ==> %@", responseData);
+//                    
+//                    var error: NSError?
+//                    
+//                    let jsonData:NSDictionary = NSJSONSerialization.JSONObjectWithData(urlData!, options:NSJSONReadingOptions.MutableContainers , error: &error) as NSDictionary
+//                    
+//                    
+//                    let success:NSInteger = jsonData.valueForKey("success") as NSInteger
+//                    
+//                    //[jsonData[@"success"] integerValue];
+//                    
+//                    NSLog("Success: %ld", success);
+//                    
+//                    if(success == 1)
+//                    {
+//                        NSLog("Successful Sign-Up");
+//                        self.dismissViewControllerAnimated(true, completion: nil)
+//                    }else{
+//                        var error_msg:NSString
+//                        
+//                        if jsonData["error_message"] as? NSString != nil {
+//                            error_msg = jsonData["error_message"] as NSString
+//                        }else{
+//                            error_msg = "Unknown Error"
+//                        }
+//                        var alertView:UIAlertView = UIAlertView()
+//                        alertView.title = "!Error!"
+//                        alertView.message = error_msg
+//                        alertView.delegate = self
+//                        alertView.addButtonWithTitle("Retry")
+//                        alertView.show()
+//                        
+//                    }
+//                    
+//                }else{
+//                    var alertView:UIAlertView = UIAlertView()
+//                    alertView.title = "!Error!"
+//                    alertView.message = "Connection Failed"
+//                    alertView.delegate = self
+//                    alertView.addButtonWithTitle("Retry")
+//                    alertView.show()
+//                }
+//            }else{
+//                var alertView:UIAlertView = UIAlertView()
+//                alertView.title = "!Error!"
+//                alertView.message = "Connection Failure"
+//                if let error = reponseError {
+//                    alertView.message = (error.localizedDescription)
+//                }
+//                alertView.delegate = self
+//                alertView.addButtonWithTitle("Retry")
+//                alertView.show()
+//            }
+//        }
         
     }
     
-    
+    func displayError(errorMessage:String)
+    {
+        var error = UIAlertController(title: "Error", message: errorMessage, preferredStyle: UIAlertControllerStyle.Alert);
+        
+        let continueAction = UIAlertAction(title: "Continue", style: UIAlertActionStyle.Default, handler: nil);
+        
+        error.addAction(continueAction);
+        
+        self.presentViewController(error, animated: true, completion: nil);
+    }
 
     /*
     // MARK: - Navigation
