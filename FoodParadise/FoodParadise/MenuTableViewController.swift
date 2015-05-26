@@ -14,19 +14,21 @@ class MenuTableViewController: UITableViewController {
 
     
     //Setup array for Menu
-    var myMenuList = [String]()
-    
+    var recipes = [Recipe]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
         //Filling in data
-        self.myMenuList = [
-            Menu(Title: "Lasagna"),
-            Menu(Title: "Name2"),
-            Menu(Title: "Name3"),
-            Menu(Title: "Name4")]
+        self.recipes = [
+            Recipe(Title:"Lasagna"),//id=196149
+            Recipe(Title:"Chocolate Mint Bars"),//id=1961
+            Recipe(Title:"Annie Mae Jones Yeast Rolls"),//id=19643
+            Recipe(Title:"Chicken, Mushroom and Pasta Hot Dish"),]//id=196445
+        
+        
+        // Reload table
+        self.tableView.reloadData()
         
     }
 
@@ -36,68 +38,61 @@ class MenuTableViewController: UITableViewController {
     }
 
     
-    
-    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
-        return self.myMenuList.count
+        //Sets the requred number of rows
+        return self.recipes.count
     }
-    
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        //Find an empty cell to use
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
+        //Locate empty cell to fill data in
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as UITableViewCell
         
-        var menu : Menu
+        var menu : Recipe
         
-        //Set appropriate array
-        menu = menu[indexPath.row]
+        menu = recipes[indexPath.row]
         
-        
-        //Set up the Cell Data
+        //Set the data for each row
         cell.textLabel!.text = menu.Title
         
-        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
-        
-        
         return cell
-        
     }
     
-    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        self.performSegueWithIdentifier("bookingDetail", sender: tableView)
-    }
-    
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let daysTableViewController = segue.destinationViewController as DayTableViewController
-        
-        if isSearchCells == "Yes" {
-            //Searched next page
-            let indexPath = self.searchDisplayController!.searchResultsTableView.indexPathForSelectedRow()!
-            
-            
-            
-        } else if isSearchCells == "No" {
-            //Non search next page
-            let indexPath = self.tableView.indexPathForSelectedRow()!
-            
-            var DaysArray : Day
-            DaysArray = daysArray[indexPath.row]
-            daysTableViewController.DayArray = DaysArray.days
-            
-        }
-    }
-    
-    
-    
-    
-    
-    
-    
-    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        let viewController = segue.destinationViewController as ViewController
+//        
+//        let indexPath = self.tableView.indexPathForSelectedRow()!
+//        
+//        var LocationInfo : AreaInfo
+//        LocationInfo = locationInfo[indexPath.row]
+//        //        viewController.locationInfoLocationInfoArray = AreaInfo.
+//        
+//    }
 
+    
+    
+    
+    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        let viewController = segue.destinationViewController as ViewController
+//        
+//        let indexPath = self.tableView.indexPathForSelectedRow()!
+//        
+//        var LocationInfo : AreaInfo
+//        LocationInfo = locationInfo[indexPath.row]
+//        //        viewController.locationInfoLocationInfoArray = AreaInfo.
+//        
+//    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     // MARK: - Table view data source
 
 

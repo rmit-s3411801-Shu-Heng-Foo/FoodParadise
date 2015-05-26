@@ -1,5 +1,5 @@
 //
-//  Menu.swift
+//  Recipe.swift
 //  FoodParadise
 //
 //  Created by Nicholas Nicolaou on 26/05/2015.
@@ -10,6 +10,6 @@ import UIKit
 import Foundation
 
 
-struct Menu {
+struct Recipe {
     let Title : String
 }

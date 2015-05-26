@@ -35,16 +35,17 @@ class FoodDetailViewController: UIViewController {
         
         //url must match : http://api.bigoven.com/recipe/196149?api_key=dvx37962Qnz7wY2uiRTE9gC9PHJ9WzR5
         
-        $.ajax({
-            type: "GET",
-            dataType: 'json',
-            cache: false,
-            url: url,
-            success: function (data) {
-                alert('success');
-                console.log(data);
-            }
-        });
+//        $.ajax({
+//            type: "GET",
+//            dataType: 'json',
+//            cache: false,
+//            url: url,
+//            success: function (data) {
+//                alert('success');
+//                console.log(data);
+//            }
+//        });
+        
     }
 
     /*

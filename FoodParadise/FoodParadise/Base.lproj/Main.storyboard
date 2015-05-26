@@ -93,7 +93,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="jN7-r5-jYe" style="IBUITableViewCellStyleDefault" id="XXg-AX-1tY">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="jN7-r5-jYe" style="IBUITableViewCellStyleDefault" id="XXg-AX-1tY">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XXg-AX-1tY" id="8if-Xh-C4N">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -506,7 +506,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DZG-va-3Jb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1896" y="-604.5"/>
+            <point key="canvasLocation" x="1920" y="-568.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BPp-Du-MAR">
