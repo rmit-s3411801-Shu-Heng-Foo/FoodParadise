@@ -9,18 +9,25 @@
 import UIKit
 
 class MenuTableViewController: UITableViewController {
+   
     //let API_KEY :String = "?api_key= dvxZrB702s49D3kzm6xbrcMC860Dp68q"
-    //Nicks API Key
-    let API_KEY :String = "?api_key= dvx37962Qnz7wY2uiRTE9gC9PHJ9WzR5"
 
+    
+    //Setup array for Menu
+    var myMenuList = [String]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        //Filling in data
+        self.myMenuList = [
+            Menu(Title: "Lasagna"),
+            Menu(Title: "Name2"),
+            Menu(Title: "Name3"),
+            Menu(Title: "Name4")]
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,19 +35,71 @@ class MenuTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
-        return 0
-    }
-
+    
+    
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return self.myMenuList.count
     }
+    
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        //Find an empty cell to use
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
+        
+        var menu : Menu
+        
+        //Set appropriate array
+        menu = menu[indexPath.row]
+        
+        
+        //Set up the Cell Data
+        cell.textLabel!.text = menu.Title
+        
+        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+        
+        
+        return cell
+        
+    }
+    
+    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("bookingDetail", sender: tableView)
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let daysTableViewController = segue.destinationViewController as DayTableViewController
+        
+        if isSearchCells == "Yes" {
+            //Searched next page
+            let indexPath = self.searchDisplayController!.searchResultsTableView.indexPathForSelectedRow()!
+            
+            
+            
+        } else if isSearchCells == "No" {
+            //Non search next page
+            let indexPath = self.tableView.indexPathForSelectedRow()!
+            
+            var DaysArray : Day
+            DaysArray = daysArray[indexPath.row]
+            daysTableViewController.DayArray = DaysArray.days
+            
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+
+    // MARK: - Table view data source
+
 
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

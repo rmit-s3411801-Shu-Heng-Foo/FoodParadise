@@ -21,6 +21,7 @@
 		43C4CBE81B0F45C1007ACBA1 /* SignUpResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C4CBE71B0F45C1007ACBA1 /* SignUpResultViewController.swift */; };
 		43C4CBEA1B0F4673007ACBA1 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C4CBE91B0F4673007ACBA1 /* CartViewController.swift */; };
 		43C4CBEC1B0F47C2007ACBA1 /* CheckOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C4CBEB1B0F47C2007ACBA1 /* CheckOutViewController.swift */; };
+		F001F0501B14312200405170 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001F04F1B14312200405170 /* Menu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		43C4CBE71B0F45C1007ACBA1 /* SignUpResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpResultViewController.swift; sourceTree = "<group>"; };
 		43C4CBE91B0F4673007ACBA1 /* CartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		43C4CBEB1B0F47C2007ACBA1 /* CheckOutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckOutViewController.swift; sourceTree = "<group>"; };
+		F001F04F1B14312200405170 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				43026FC51B02F5B200AD2C80 /* Images.xcassets */,
 				43026FC71B02F5B200AD2C80 /* LaunchScreen.xib */,
 				43026FBC1B02F5B200AD2C80 /* Supporting Files */,
+				F001F04F1B14312200405170 /* Menu.swift */,
 			);
 			path = FoodParadise;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				43B958E11B0478FC00EC10D9 /* SignUpViewController.swift in Sources */,
 				43C4CBEA1B0F4673007ACBA1 /* CartViewController.swift in Sources */,
 				43C4CBE81B0F45C1007ACBA1 /* SignUpResultViewController.swift in Sources */,
+				F001F0501B14312200405170 /* Menu.swift in Sources */,
 				43C4CBEC1B0F47C2007ACBA1 /* CheckOutViewController.swift in Sources */,
 				4304A3BD1B12F0F8006AD497 /* MenuTableViewController.swift in Sources */,
 				43026FC11B02F5B200AD2C80 /* LoginViewController.swift in Sources */,
