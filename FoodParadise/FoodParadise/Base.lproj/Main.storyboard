@@ -30,16 +30,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nuf-1E-T4G">
-                                <rect key="frame" x="220" y="328" width="160" height="28"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="Sign In">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="csX-hC-gsA" kind="show" id="ejF-Ev-tEK"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="99J-rk-iHq">
                                 <rect key="frame" x="220" y="356" width="160" height="27"/>
                                 <constraints>
@@ -51,6 +41,17 @@
                                 </state>
                                 <connections>
                                     <segue destination="9HC-NY-zTs" kind="show" id="R8P-TZ-35f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nuf-1E-T4G">
+                                <rect key="frame" x="220" y="328" width="160" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="signInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GXm-N5-dDl"/>
+                                    <segue destination="csX-hC-gsA" kind="show" id="ejF-Ev-tEK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -74,8 +75,9 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="WVU-KK-rjM"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="signIn" destination="nuf-1E-T4G" id="WP6-m9-bpr"/>
+                        <outlet property="passwordTxt" destination="PeJ-XT-ia2" id="mWM-Ij-6Aq"/>
                         <outlet property="signUp" destination="99J-rk-iHq" id="1wM-wU-FQf"/>
+                        <outlet property="usernameText" destination="CrX-5X-myB" id="vKh-fD-Inb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -395,6 +397,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="signUpTapped:" destination="9HC-NY-zTs" eventType="touchUpInside" id="aWt-8B-xka"/>
                                     <segue destination="Dwz-kr-76h" kind="presentation" id="eoV-Po-IWN"/>
                                 </connections>
                             </button>
@@ -428,7 +431,6 @@
                     <connections>
                         <outlet property="confirm" destination="hIR-NV-j4n" id="Rwx-Si-rDK"/>
                         <outlet property="password" destination="MkH-Fv-HYt" id="62n-hn-Wit"/>
-                        <outlet property="signup" destination="kCX-RN-aLQ" id="Vwb-hP-uuJ"/>
                         <outlet property="username" destination="hMJ-0m-Dix" id="c1D-od-RmM"/>
                     </connections>
                 </viewController>

@@ -10,14 +10,28 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    @IBOutlet weak var signIn: UIButton!
     @IBOutlet weak var signUp: UIButton!
 
+    
+    @IBOutlet var usernameText: UITextField!
+    
+    @IBOutlet var passwordTxt: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    
+    
+    @IBAction func signInTapped(sender: UIButton) {
+        //Authenticate the login
+        
+        
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
