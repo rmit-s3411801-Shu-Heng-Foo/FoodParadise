@@ -84,12 +84,12 @@ class SignUpViewController: UIViewController {
             
             var urlData: NSData? = NSURLConnection.sendSynchronousRequest(request, returningResponse:&response, error:&reponseError)
             
-            if ( urlData != nil ) {
+            if( urlData != nil ){
                 let res = response as NSHTTPURLResponse!;
                 
                 NSLog("Response code: %ld", res.statusCode);
                 
-                if (res.statusCode >= 200 && res.statusCode < 300)
+                if(res.statusCode >= 200 && res.statusCode < 300)
                 {
                     var responseData:NSString  = NSString(data:urlData!, encoding:NSUTF8StringEncoding)!
                     
@@ -108,34 +108,34 @@ class SignUpViewController: UIViewController {
                     
                     if(success == 1)
                     {
-                        NSLog("Sign Up SUCCESS");
+                        NSLog("Successful Sign-Up");
                         self.dismissViewControllerAnimated(true, completion: nil)
-                    } else {
+                    }else{
                         var error_msg:NSString
                         
                         if jsonData["error_message"] as? NSString != nil {
                             error_msg = jsonData["error_message"] as NSString
-                        } else {
+                        }else{
                             error_msg = "Unknown Error"
                         }
                         var alertView:UIAlertView = UIAlertView()
                         alertView.title = "!Error!"
                         alertView.message = error_msg
                         alertView.delegate = self
-                        alertView.addButtonWithTitle("OK")
+                        alertView.addButtonWithTitle("Retry")
                         alertView.show()
                         
                     }
                     
-                } else {
+                }else{
                     var alertView:UIAlertView = UIAlertView()
                     alertView.title = "!Error!"
                     alertView.message = "Connection Failed"
                     alertView.delegate = self
-                    alertView.addButtonWithTitle("OK")
+                    alertView.addButtonWithTitle("Retry")
                     alertView.show()
                 }
-            }  else {
+            }else{
                 var alertView:UIAlertView = UIAlertView()
                 alertView.title = "!Error!"
                 alertView.message = "Connection Failure"
@@ -143,7 +143,7 @@ class SignUpViewController: UIViewController {
                     alertView.message = (error.localizedDescription)
                 }
                 alertView.delegate = self
-                alertView.addButtonWithTitle("OK")
+                alertView.addButtonWithTitle("Retry")
                 alertView.show()
             }
         }

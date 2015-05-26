@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoodParadise/LoginViewController.swift"
-            timestampString = "454298267.099682"
+            timestampString = "454300233.557258"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
             landmarkName = "didReceiveMemoryWarning()"
             landmarkType = "5">
          </BreakpointContent>
